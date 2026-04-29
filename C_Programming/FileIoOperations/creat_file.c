@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<fnctl.h>//file control
+#include<fcntl.h>//file control
 
 int main()
 {
