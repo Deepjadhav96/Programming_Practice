@@ -12,15 +12,15 @@ class ChatServer
 
         System.out.println("Server is waiting at port 2100...");
 
-        Socket sobj = ssobj.accept(); //it accept the request of client
+        Socket sobj = ssobj.accept(); //it accept the request of client.
 
         System.out.println("Client request gets accepted succesfully..");
 
-        PrintStream pobj = new PrintStream(sobj.getOutputStream()); //
+        PrintStream pobj = new PrintStream(sobj.getOutputStream()); //sending data to the other application.
 
-        BufferedReader bobj1 = new BufferedReader(new InputStreamReader(sobj.getInputStream()));
+        BufferedReader bobj1 = new BufferedReader(new InputStreamReader(sobj.getInputStream()));//it takes input as(data coming from the client/other app)
 
-        BufferedReader bobj2 = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bobj2 = new BufferedReader(new InputStreamReader(System.in)); //it takes input from keyboard
 
         System.out.println("---------------------------------------------------------");
         System.out.println("------------Marvellous chat server-----------------------");
@@ -37,9 +37,9 @@ class ChatServer
 
         }
 
-        
-    }
-    sobj.close();
-    ssobj.close();
+         sobj.close();
+         ssobj.close();
 
+    }
+   
 }

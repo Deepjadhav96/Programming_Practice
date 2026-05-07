@@ -8,17 +8,16 @@ class ChatClient
         
         System.out.println("Client application is running...");
 
-        Socket sobj = new Socket("localhost",2100); //
+        Socket sobj = new Socket("localhost",2100); //localhost is IP address of local machine and 2100 port of server application.
 
-        System.out.println("Connection is successful with server");
+        System.out.println("Connection is successful with server"); 
 
-        PrintStream pobj = new PrintStream(sobj.getOutputStream());
+        PrintStream pobj = new PrintStream(sobj.getOutputStream());//sending data to the other application.
 
-        BufferedReader bobj1 = new BufferedReader(new InputStreamReader(sobj.getInputStream()));
+        BufferedReader bobj1 = new BufferedReader(new InputStreamReader(sobj.getInputStream()));//it takes input as(data coming from the server/other app)
 
-        BufferedReader bobj2 = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bobj2 = new BufferedReader(new InputStreamReader(System.in)); //it takes input from keyboard
 
-    
         System.out.println("---------------------------------------------------------");
         System.out.println("------------Marvellous chat client-----------------------");
         System.out.println("---------------------------------------------------------");
